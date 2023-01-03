@@ -1,4 +1,79 @@
-.hello {
-  color: red;
-  background: url('./bell.png');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@500;600;700&family=Open+Sans:wght@300;500;600;700&family=Quicksand:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+:root {
+  --main-color: #ff005e;
+  --secondary-color: #b20077;
+  --white-color: #fff;
+  --back-color: #000;
+  --font-spacing: 0.3rem;
+  --main-font: 'lato', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+  --transition: all 0.3s;
+  --spacing: 0.1rem;
+  --drop-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--back-color);
+  color: var(--white-color);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.5rem;
+  font-family: var(--main-font);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.container {
+  padding: 1rem 20%;
+}
+
+nav {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  letter-spacing: var(--spacing);
+}
+
+img {
+  width: 10%;
 }
