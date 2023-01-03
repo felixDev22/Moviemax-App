@@ -19,6 +19,7 @@
   --secondary-font: 'Open Sans', sans-serif;
   --transition: all 0.3s;
   --spacing: 0.1rem;
+  --border-radius: 15px;
   --drop-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -85,11 +86,11 @@ nav ul li a:hover {
 /* Movie-deck section */
 
 .movies-deck {
-  margin-top: 10%;
+  margin-top: 5%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 35px;
+  grid-column-gap: 40px;
   grid-row-gap: 60px;
 }
 
@@ -101,4 +102,14 @@ nav ul li a:hover {
 
 .image img {
   width: 90%;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+button {
+  padding: 10px 25px;
+  background: var(--main-color);
+  color: var(--white-color);
+  font-size: 1rem;
+  border-radius: 15px;
 }
