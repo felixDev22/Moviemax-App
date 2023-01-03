@@ -85,19 +85,34 @@ nav ul li a:hover {
 
 /* Movie-deck section */
 
+.category {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: -140px;
+}
+
+.category i {
+  color: var(--main-color);
+  font-size: 1.4rem;
+}
+
+hr {
+  width: 100%;
+  height: 0.5px;
+  color: var(--white-color);
+}
+
 .movies-deck {
   margin: 8% auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 40px;
-  grid-row-gap: 60px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .image img {
