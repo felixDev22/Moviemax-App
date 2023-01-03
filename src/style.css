@@ -74,6 +74,31 @@ nav ul li a {
   letter-spacing: var(--spacing);
 }
 
-img {
+nav ul li a:hover {
+  color: var(--main-color);
+}
+
+.logo img {
   width: 12%;
+}
+
+/* Movie-deck section */
+
+.movies-deck {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 35px;
+  grid-row-gap: 60px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.image img {
+  width: 90%;
 }
