@@ -86,7 +86,7 @@ nav ul li a:hover {
 /* Movie-deck section */
 
 .movies-deck {
-  margin-top: 5%;
+  margin: 8% auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
@@ -107,10 +107,25 @@ nav ul li a:hover {
 }
 
 button {
-  padding: 10px 25px;
+  padding: 8px 15px;
   background: var(--main-color);
   color: var(--white-color);
   font-size: 1rem;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
+}
+
+.comment-likes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-likes i {
+  font-size: 1rem;
+  margin-left: -20px;
+}
+
+.comment-likes span {
+  margin-right: 30px;
 }
