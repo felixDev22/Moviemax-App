@@ -121,6 +121,10 @@ hr {
   border-radius: var(--radius);
 }
 
+.image img:hover {
+  border: solid 0.2rem #fff;
+}
+
 button {
   padding: 8px 15px;
   background: var(--main-color);
