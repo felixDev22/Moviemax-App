@@ -77,3 +77,11 @@ nav ul li a {
 img {
   width: 12%;
 }
+
+footer {
+  border-top: 2px solid #fff;
+}
+
+.footerlink {
+  color: #ff007f;
+}
