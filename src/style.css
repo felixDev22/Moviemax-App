@@ -19,6 +19,7 @@
   --secondary-font: 'Open Sans', sans-serif;
   --transition: all 0.3s;
   --spacing: 0.1rem;
+  --radius: 15px;
   --drop-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -74,14 +75,97 @@ nav ul li a {
   letter-spacing: var(--spacing);
 }
 
-img {
+nav ul li a:hover {
+  color: var(--main-color);
+}
+
+.logo img {
   width: 12%;
+}
+
+/* Movie-deck section */
+
+.category {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: -140px;
+}
+
+.category i {
+  color: var(--main-color);
+  font-size: 1.4rem;
+}
+
+hr {
+  width: 100%;
+  height: 0.5px;
+  color: var(--white-color);
+}
+
+.movies-deck {
+  margin: 8% auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image img {
+  width: 90%;
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+}
+
+.image img:hover {
+  border: solid 0.2rem #fff;
+}
+
+button {
+  padding: 6px 12px;
+  background: var(--main-color);
+  color: var(--white-color);
+  font-size: 0.8rem;
+  letter-spacing: var(--spacing);
+  border-radius: var(--radius);
+}
+
+button:hover {
+  background: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.comment-likes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-likes i {
+  font-size: 1rem;
+  margin-left: -20px;
+}
+
+.comment-likes i:hover {
+  color: var(--secondary-color);
+}
+
+.comment-likes span {
+  margin-right: 30px;
 }
 
 footer {
   border-top: 2px solid #fff;
 }
 
+footer p {
+  font-size: 0.9rem;
+}
+
 .footerlink {
-  color: #ff007f;
+  color: var(--main-color);
 }
