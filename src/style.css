@@ -148,7 +148,7 @@ button:hover {
 
 .comment-likes i {
   font-size: 1rem;
-  margin-left: -20px;
+  margin-left: 120px;
 }
 
 .comment-likes i:hover {
@@ -156,7 +156,7 @@ button:hover {
 }
 
 .comment-likes span {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 footer {
