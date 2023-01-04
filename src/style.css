@@ -157,3 +157,15 @@ button:hover {
 .comment-likes span {
   margin-right: 30px;
 }
+
+footer {
+  border-top: 2px solid #fff;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+.footerlink {
+  color: var(--main-color);
+}
