@@ -42,8 +42,8 @@ const createPopup = () => {
     <h3 class="commentalign">Add a comment</h3>
     <form action="">
       <fieldset>
-        <label for="name">
-          <input type="text" id="name" placeholder="Your name">
+        <label for="nameinput">
+          <input type="text" id="nameinput" placeholder="Your name">
         </label>
       </fieldset>
       <fieldset class="popupspacing">
