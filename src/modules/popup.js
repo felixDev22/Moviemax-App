@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // import popupImage from '../assets/blackout.jpg';
 // import cancelPopup from '../assets/cancel.png';
 
@@ -9,7 +10,9 @@
 //   genre: 'Action',
 //   premiered: '2015-10-12',
 //   description:
-//     'A story of two boys looking for their identity in a world where the traditional role of the man is changing. They are longing for success, endless love and passionate sex - but what happens if you fail?',
+//     'A story of two boys looking for their identity in a world where the
+// traditional role of the man is changing. They are longing for success,
+// endless love and passionate sex - but what happens if you fail?',
 // };
 
 // window.hidePopup = () => popupArea.classList.add('nodisplay');
