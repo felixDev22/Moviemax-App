@@ -102,7 +102,8 @@ hr {
   color: var(--white-color);
 }
 
-.movies-deck {
+.movies-deck,
+.movies-deck2 {
   margin: 8% auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

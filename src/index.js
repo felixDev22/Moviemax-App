@@ -1,8 +1,4 @@
 import './style.css';
-import createPopup from './modules/popup.js';
+import displayUI from './modules/displayUI.js';
 
-const popupBtn = document.querySelectorAll('.popupbtn');
-
-popupBtn.forEach((item) => {
-  item.addEventListener('click', createPopup);
-});
+displayUI();
