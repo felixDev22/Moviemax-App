@@ -29,7 +29,7 @@ const displayUI = async () => {
               <img id='movie' src="${comedyImage}" alt="movie" />
             </div>
             <div class="comment-likes">
-              <button id="comment">Comments</button>
+              <button class="popupbtn" id="comment" >Comments</button>
               <i class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
               <span id="likes">${obj.likes}</span>
             </div>

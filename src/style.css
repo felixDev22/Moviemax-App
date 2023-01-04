@@ -170,3 +170,63 @@ footer p {
 .footerlink {
   color: var(--main-color);
 }
+
+#popup {
+  max-width: 30rem;
+  z-index: 98;
+  position: fixed;
+  top: 10%;
+  left: 30%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+#popup-flex {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: #ff007f;
+  overflow-y: scroll;
+  max-height: 40rem;
+}
+
+.genre {
+  display: flex;
+  justify-content: space-around;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commentalign {
+  text-align: center;
+}
+
+.popupspacing {
+  margin-top: 1rem;
+}
+
+.nodisplay {
+  display: none;
+}
+
+#popupimage {
+  width: 20rem;
+  height: 15rem;
+}
+
+#popupcancel {
+  width: 2rem;
+  height: 2rem;
+}
+
+#nameinput {
+  height: 2rem;
+  width: 14.7rem;
+}
