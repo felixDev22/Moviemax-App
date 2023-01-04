@@ -1,18 +1,21 @@
 import { comedy, action } from './variables.js';
 import getNumberOfLikes from './addLikes.js';
 import comedyImage from '../assets/movie.jpeg';
+import getMovies from './getMovies.js';
 
 // Render likes
 const displayUI = async () => {
+  const movies = getMovies();
   const data = await getNumberOfLikes();
   comedy.innerHTML = '';
   action.innerHTML = '';
   data.forEach((obj, objIndex) => {
+    const { movieImg } = movies[objIndex];
     if (objIndex <= 3) {
       comedy.innerHTML += `
       <div class="card">
             <div class="image">
-              <img id='movie' src="${comedyImage}" alt="movie" />
+              <img id='movie' src="${movieImg}" alt="movie" />
             </div>
             <div class="comment-likes">
               <button id="comment">Comments</button>
@@ -26,7 +29,7 @@ const displayUI = async () => {
       action.innerHTML += `
       <div class="card">
             <div class="image">
-              <img id='movie' src="${comedyImage}" alt="movie" />
+              <img id='movie' src="${movieImg}" alt="movie" />
             </div>
             <div class="comment-likes">
               <button class="popupbtn" id="comment" >Comments</button>
