@@ -27,7 +27,7 @@ const displayUI = async () => {
           </div>
           <div class="comment-likes">
             <button class="btnClass" id="${objIndex}">Comments</button>
-            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="${itemId}"></i>
+            <i class="fa-sharp fa-solid fa-heart" id="${itemId}"></i>
             <span id="${objIndex}">${likes}</span>
           </div>
         </div>
@@ -40,7 +40,7 @@ const displayUI = async () => {
           </div>
           <div class="comment-likes">
             <button class="btnClass" id="${objIndex}" >Comments</button>
-            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="${itemId}"></i>
+            <i class="fa-sharp fa-solid fa-heart" id="${itemId}"></i>
             <span id="${objIndex}">${likes}</span>
           </div>
         </div>`;
