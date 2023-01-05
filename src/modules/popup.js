@@ -33,11 +33,11 @@ const createPopup = async (index) => {
   <div class="popupspacing">
     <div class="genre">
       <p>Status: ${movieStatus}</p>
-      <p>premiered: ${moviePremier}</p>
+      <p>Premiered: ${moviePremier}</p>
     </div>
     <div class="description popupspacing">
-      <h3>Description</h3>
-      <p>${movieInfo}</p>
+      <h3 class="commentalign">Description</h3>
+      <p class="movieInfo" >${movieInfo}</p>
     </div>
   </div>
   <div class="popupspacing">
@@ -59,7 +59,7 @@ const createPopup = async (index) => {
           <textarea name="insight" id="insight" cols="30" rows="10" placeholder="Your insight"></textarea>
         </label>
       </fieldset>
-      <button class="formSubmit" id="${itemId}" type="submit">comment</button>
+      <button class="formSubmit" id="${itemId}" type="submit">Comment</button>
     </form>
   </div>
 </div>`;
