@@ -17,7 +17,7 @@ const getMovies = () => {
     const trimmedSummary = summary.substring(0, 200);
     const movie = {
       movieId: id,
-      item_id: itemId,
+      itemId,
       movieImg: medium,
       movieTitle: name,
       movieStatus: status,

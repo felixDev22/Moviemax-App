@@ -1,5 +1,7 @@
 import cancelPopup from '../assets/cancel.png';
 import { movies } from './displayUI.js';
+import { getComment } from './comments.js';
+import { comments } from './variables';
 
 const popupArea = document.querySelector('#popups');
 
@@ -17,8 +19,14 @@ window.onsubmit = (e) => {
   console.log('Submitted');
 };
 
-const createPopup = (index) => {
-  const { movieImg, movieInfo, movieTitle, movieStatus, moviePremier } = movies[index];
+const createPopup = async (index) => {
+  const {
+    movieImg, movieInfo, movieTitle, movieStatus, moviePremier, itemId,
+  } = movies[index];
+  const commentItem = '?item_id='.concat(itemId);
+  const comments = await getComment(commentItem);
+  const commentsCount = comments.length;
+  console.log(comments, commentsCount);
   popupArea.classList.remove('nodisplay');
   popupArea.classList.add('background');
   popupArea.innerHTML = `<div id="popup-flex" class="scroll">
@@ -38,7 +46,7 @@ const createPopup = (index) => {
     </div>
   </div>
   <div class="popupspacing">
-    <h3 class="commentalign">Comments <span>2</span></h3>
+    <h3 class="commentalign">Comments <span>${commentsCount}</span></h3>
     <div>
       <p>2015-10-12 Lee: I loved the show</p>
       <p>2015-10-12 Lee: I loved the show</p>
