@@ -1,6 +1,6 @@
 import './style.css';
 import displayUI from './modules/displayUI.js';
-// import createPopup from './modules/popup.js';
+import createPopup from './modules/popup.js';
 
 displayUI();
 
