@@ -1,5 +1,6 @@
 import cancelPopup from '../assets/cancel.png';
 import popupImage from '../assets/blackout.jpg';
+import { movies } from './displayUI.js';
 
 const popupArea = document.querySelector('#popups');
 
@@ -25,23 +26,24 @@ window.onsubmit = (e) => {
   console.log('Submitted');
 };
 
-const createPopup = () => {
+const createPopup = (index) => {
+  const { movieImg, movieInfo, movieTitle, movieStatus, moviePremier } = movies[index];
   popupArea.classList.remove('nodisplay');
   popupArea.classList.add('background');
   popupArea.innerHTML = `<div id="popup-flex" class="scroll">
   <div onclick='hidePopup()'>
   <img id="popupcancel" class="popupspacing" src=${cancelPopup} alt="movie cover">
   </div>
-  <img id="popupimage" class="popupspacing" src=${urlData.imageUrl} alt="movie cover">
-  <h2 class="popupspacing">${urlData.movieTitle}</h2>
+  <img id="popupimage" class="popupspacing" src=${movieImg} alt="movie cover">
+  <h2 class="popupspacing">${movieTitle}</h2>
   <div class="popupspacing">
     <div class="genre">
-      <p>Genre: ${urlData.genre}</p>
-      <p>premiered: ${urlData.premiered}</p>
+      <p>Status: ${movieStatus}</p>
+      <p>premiered: ${moviePremier}</p>
     </div>
     <div class="description popupspacing">
       <h3>Description</h3>
-      <p>${urlData.description}</p>
+      <p>${movieInfo}</p>
     </div>
   </div>
   <div class="popupspacing">

@@ -2,9 +2,9 @@ import { comedy, action } from './variables.js';
 import getNumberOfLikes from './addLikes.js';
 import getMovies from './getMovies.js';
 
+const movies = getMovies();
 // Render likes
 const displayUI = async () => {
-  const movies = await getMovies();
   const data = await getNumberOfLikes();
   comedy.innerHTML = '';
   action.innerHTML = '';
@@ -42,3 +42,4 @@ const displayUI = async () => {
 };
 
 export default displayUI;
+export { movies };

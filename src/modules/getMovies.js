@@ -3,7 +3,8 @@ const pullMovies = ['Young Sheldon', 'Modern Family', 'Friends', 'The Office', '
 const displayMovies = [];
 
 const getMovies = () => {
-  pullMovies.forEach(async (moviez) => {
+  pullMovies.forEach(async (moviez, index) => {
+    const itemId = 'item'.concat(index);
     const fetchUrl = baseUrl.concat(moviez);
     const response = await fetch(fetchUrl);
     const data = await response.json();
@@ -16,6 +17,7 @@ const getMovies = () => {
     const trimmedSummary = summary.substring(0, 200);
     const movie = {
       movieId: id,
+      item_id: itemId,
       movieImg: medium,
       movieTitle: name,
       movieStatus: status,
