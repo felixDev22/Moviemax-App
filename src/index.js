@@ -8,8 +8,10 @@ window.addEventListener('load', () => {
   displayUI();
 
   const commentBtn = document.querySelectorAll('.btnClass');
-  commentBtn.forEach((element) => {
-    element.addEventListener('click', createPopup);
+  commentBtn.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      createPopup(index);
+    });
   });
 });
 

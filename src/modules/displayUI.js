@@ -4,16 +4,17 @@ import getNumberOfLikes from './addLikes.js';
 import getMovies from './getMovies.js';
 import { pullMovies } from './getMovies.js';
 
+const movies = getMovies();
 // Render likes
 const displayUI = async () => {
-  const movies = getMovies();
   const data = await getNumberOfLikes();
   comedy.innerHTML = '';
   action.innerHTML = '';
   data.forEach((obj, objIndex) => {
-    const { movieImg } = movies[objIndex];
-    if (objIndex <= 3) {
-      comedy.innerHTML += `
+    if (movies[objIndex] && movies[objIndex].movieImg) {
+      const { movieImg } = movies[objIndex];
+      if (objIndex <= 3) {
+        comedy.innerHTML += `
       <div class="card">
             <div class="image">
               <img id='movie' src="${movieImg}" alt="movie" />
@@ -25,8 +26,8 @@ const displayUI = async () => {
             </div>
           </div>
   `;
-    } else {
-      action.innerHTML += `
+      } else {
+        action.innerHTML += `
       <div class="card">
             <div class="image">
               <img id='movie' src="${movieImg}" alt="movie" />
@@ -37,6 +38,7 @@ const displayUI = async () => {
               <span id="likes">${obj.likes}</span>
             </div>
           </div>`;
+      }
     }
   });
 };
@@ -45,3 +47,4 @@ const featuredShows = document.querySelector('.counter');
 featuredShows.innerHTML = `Movies (${pullMovies.length})`;
 
 export default displayUI;
+export { movies };

@@ -1,50 +1,73 @@
 import cancelPopup from '../assets/cancel.png';
-import popupImage from '../assets/blackout.jpg';
+import { movies } from './displayUI.js';
+import { getComment, postComment } from './comments.js';
 
 const popupArea = document.querySelector('#popups');
-
-const urlData = {
-  imageUrl: popupImage,
-  movieTitle: 'Black out',
-  genre: 'Action',
-  premiered: '2015-10-12',
-  description: 'A story of two boys looking for their identity in a world where the traditional role of the man is changing. They are longing for success, endless love and passionate sex - but what happens if you fail?',
-};
 
 window.hidePopup = () => {
   popupArea.classList.add('nodisplay');
   popupArea.classList.remove('background');
 };
 
-const createPopup = () => {
+window.commenting = () => {
+  const form = document.querySelector('#form');
+  const popupTitle = document.querySelector('#title');
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const username = document.querySelector('#name');
+    const insight = document.querySelector('#insight');
+    if (username.value === '' || insight.value === '') {
+      alert('Do not leave blanks');
+      return;
+    }
+    movies.forEach((element) => {
+      if (popupTitle.innerHTML === element.movieTitle) {
+        postComment(username.value, insight.value, element.itemId);
+      }
+    });
+    username.value = '';
+    insight.value = '';
+  };
+};
+
+const createPopup = async (index) => {
+  const {
+    movieImg, movieInfo, movieTitle, movieStatus, moviePremier, itemId,
+  } = movies[index];
+  const commentItem = '?item_id='.concat(itemId);
+  const comments = await getComment(commentItem);
+  const commentsCount = comments.length;
+  let comment = '';
+  comments.forEach((element) => {
+    comment += `<p>${element.creation_date} ${element.username}: ${element.comment}</p>`;
+  });
   popupArea.classList.remove('nodisplay');
   popupArea.classList.add('background');
   popupArea.innerHTML = `<div id="popup-flex" class="scroll">
   <div onclick='hidePopup()'>
   <img id="popupcancel" class="popupspacing" src=${cancelPopup} alt="movie cover">
   </div>
-  <img id="popupimage" class="popupspacing" src=${urlData.imageUrl} alt="movie cover">
-  <h2 class="popupspacing">${urlData.movieTitle}</h2>
+  <img id="popupimage" class="popupspacing" src=${movieImg} alt="movie cover">
+  <h2 id="title" class="popupspacing">${movieTitle}</h2>
   <div class="popupspacing">
     <div class="genre">
-      <p>Genre: ${urlData.genre}</p>
-      <p>premiered: ${urlData.premiered}</p>
+      <p>Status: ${movieStatus}</p>
+      <p>premiered: ${moviePremier}</p>
     </div>
     <div class="description popupspacing">
       <h3>Description</h3>
-      <p>${urlData.description}</p>
+      <p>${movieInfo}</p>
     </div>
   </div>
   <div class="popupspacing">
-    <h3 class="commentalign">Comments <span>2</span></h3>
+    <h3 class="commentalign">Comments <span>${commentsCount}</span></h3>
     <div>
-      <p>2015-10-12 Lee: I loved the show</p>
-      <p>2015-10-12 Lee: I loved the show</p>
+      ${comment}
     </div>
   </div>
   <div class="popupspacing">
     <h3 class="commentalign">Add a comment</h3>
-    <form action="">
+    <form id="form">
       <fieldset>
         <label for="name">
           <input type="text" id="name" placeholder="Your name">
@@ -55,7 +78,7 @@ const createPopup = () => {
           <textarea name="insight" id="insight" cols="30" rows="10" placeholder="Your insight"></textarea>
         </label>
       </fieldset>
-      <button type="submit">comment</button>
+      <button onclick="commenting()" type="submit">comment</button>
     </form>
   </div>
 </div>`;
