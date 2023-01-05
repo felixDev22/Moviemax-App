@@ -150,22 +150,18 @@ button:hover {
 }
 
 .comment-likes {
+  width: 70%;
+  gap: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .comment-likes i {
   font-size: 1rem;
-  margin-left: 90px;
 }
 
 .comment-likes i:hover {
   color: var(--secondary-color);
-}
-
-.comment-likes span {
-  margin-right: 140px;
 }
 
 footer {
@@ -275,8 +271,8 @@ textarea {
   padding: 12px 28px;
   background: var(--secondary-color);
   color: var(--white-color);
-  font-size: 0.8;
-  font-weight: 00;
+  font-size: 0.8rem;
+  font-weight: 300;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
   box-shadow: var(--drop-shadow);
@@ -301,10 +297,10 @@ textarea {
 
   .comment-likes i {
     font-size: 1rem;
-    margin-left: 90px;
+    margin-left: 50px;
   }
 
   .comment-likes span {
-    margin-right: 140px;
+    margin-right: 90px;
   }
 }
