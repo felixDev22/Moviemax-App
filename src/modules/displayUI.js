@@ -41,7 +41,7 @@ const displayUI = async () => {
   });
 };
 
-const featuredShows = document.querySelector('.featured-counter');
+const featuredShows = document.querySelector('.counter');
 featuredShows.innerHTML = `Movies (${pullMovies.length})`;
 
 export default displayUI;
