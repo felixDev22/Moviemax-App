@@ -1,7 +1,6 @@
 import cancelPopup from '../assets/cancel.png';
 import { movies } from './displayUI.js';
-import { getComment } from './comments.js';
-import { comments } from './variables';
+import { getComment, postComment } from './comments.js';
 
 const popupArea = document.querySelector('#popups');
 
@@ -10,13 +9,25 @@ window.hidePopup = () => {
   popupArea.classList.remove('background');
 };
 
-window.onsubmit = (e) => {
-  e.preventDefault();
-  const username = document.querySelector('#name');
-  const insight = document.querySelector('#insight');
-  username.value = '';
-  insight.value = '';
-  console.log('Submitted');
+window.commenting = () => {
+  const form = document.querySelector('#form');
+  const popupTitle = document.querySelector('#title');
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const username = document.querySelector('#name');
+    const insight = document.querySelector('#insight');
+    if (username.value === '' || insight.value === '') {
+      alert('Do not leave blanks');
+      return;
+    }
+    movies.forEach((element) => {
+      if (popupTitle.innerHTML === element.movieTitle) {
+        postComment(username.value, insight.value, element.itemId);
+      }
+    });
+    username.value = '';
+    insight.value = '';
+  };
 };
 
 const createPopup = async (index) => {
@@ -26,7 +37,6 @@ const createPopup = async (index) => {
   const commentItem = '?item_id='.concat(itemId);
   const comments = await getComment(commentItem);
   const commentsCount = comments.length;
-  console.log(comments, commentsCount);
   popupArea.classList.remove('nodisplay');
   popupArea.classList.add('background');
   popupArea.innerHTML = `<div id="popup-flex" class="scroll">
@@ -34,7 +44,7 @@ const createPopup = async (index) => {
   <img id="popupcancel" class="popupspacing" src=${cancelPopup} alt="movie cover">
   </div>
   <img id="popupimage" class="popupspacing" src=${movieImg} alt="movie cover">
-  <h2 class="popupspacing">${movieTitle}</h2>
+  <h2 id="title" class="popupspacing">${movieTitle}</h2>
   <div class="popupspacing">
     <div class="genre">
       <p>Status: ${movieStatus}</p>
@@ -65,7 +75,7 @@ const createPopup = async (index) => {
           <textarea name="insight" id="insight" cols="30" rows="10" placeholder="Your insight"></textarea>
         </label>
       </fieldset>
-      <button type="submit">comment</button>
+      <button onclick="commenting()" type="submit">comment</button>
     </form>
   </div>
 </div>`;

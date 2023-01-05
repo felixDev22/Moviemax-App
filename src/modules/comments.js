@@ -1,7 +1,6 @@
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YxBlOWRJNblYAJxe3dgi/comments';
 
 // postComment('Leehaney', 'this is great', 'item1');
-// getComment('?item_id=item1');
 
 const postComment = async (userName, insight, id) => {
   const response = await fetch(baseUrl, {
