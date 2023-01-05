@@ -5,11 +5,14 @@ import { postLikes } from './modules/postLikes.js';
 
 displayUI();
 
-document.addEventListener('click', (e) => {
+document.addEventListener('click', async (e) => {
   if (e.target.classList.contains('btnClass')) {
     createPopup(e.target.id);
   }
   if (e.target.classList.contains('fa-heart')) {
-    postLikes(e.target.id);
+    const done = await postLikes(e.target.id);
+    if (done.status === 201) {
+      displayUI();
+    }
   }
 });
