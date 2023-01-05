@@ -12,7 +12,7 @@
 # 📗 Table of Contents
 
 - [� Table of Contents](#-table-of-contents)
-- [📖 ](#-)
+- [📖  Javascript Capstone Project](#-MovieMax-)
   - [🛠 Built With HTML, CSS, \& Javascript](#-built-with-html-css--javascript)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -26,7 +26,7 @@
   - [⭐️ Show your support ](#️-show-your-support-)
   - [📝 License ](#-license-)
 
-# 📖 <a name="MovieMax"></a>
+# 📖 Javascript Capstone Project (Movie App) <a name="MovieMax"></a>
 
 > Js Capstone Project - This is a MovieMax app that sends and receives data from an API and populates data on the browser. It also allows you to add comments or likes to a movie. The app has implemented ES6 modules, callbacks, and promises, webpack, used AAA pattern for unit tests, and gitflow.
 
@@ -61,11 +61,19 @@
 
 To get a local copy up and running, follow these steps.
 
+- Create a local directory where you can clone the project.
+- Clone the project into your repository
+- Install the dependencies
+- Open the project on a browser
+
 ### Prerequisites
 
-In order to run this project you should:
+In order to run this project you need:
 
-\*You should have git and npm installed on your computer.
+- Git and GitHub
+- A code editor
+- Nodejs
+- A browser
 
 ### Clone
 
@@ -113,6 +121,16 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+
+- [ ] **Improve the UI**
+- [ ] **Make it mobile friendly**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 Microverse learning experience
@@ -122,6 +140,8 @@ Microverse learning experience
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/leehaney254/Movies-App/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
