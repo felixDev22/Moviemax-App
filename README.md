@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./movimax02.png" alt="logo" width="170"  height="auto" />
+  <img src="./MoviMAX-Logo.png" alt="logo" width="170"  height="auto" />
   <br/>
 
   <h3><b>MovieMax App</b></h3>
