@@ -16,6 +16,15 @@ window.hidePopup = () => {
   popupArea.classList.remove('background');
 };
 
+window.onsubmit = (e) => {
+  e.preventDefault();
+  const username = document.querySelector('#name');
+  const insight = document.querySelector('#insight');
+  username.value = '';
+  insight.value = '';
+  console.log('Submitted');
+};
+
 const createPopup = () => {
   popupArea.classList.remove('nodisplay');
   popupArea.classList.add('background');
@@ -44,7 +53,7 @@ const createPopup = () => {
   </div>
   <div class="popupspacing">
     <h3 class="commentalign">Add a comment</h3>
-    <form action="">
+    <form id="form">
       <fieldset>
         <label for="name">
           <input type="text" id="name" placeholder="Your name">
