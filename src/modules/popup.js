@@ -1,33 +1,12 @@
 import cancelPopup from '../assets/cancel.png';
 import { movies } from './displayUI.js';
-import { getComment, postComment } from './comments.js';
+import { getComment } from './comments.js';
 
 const popupArea = document.querySelector('#popups');
 
 window.hidePopup = () => {
   popupArea.classList.add('nodisplay');
   popupArea.classList.remove('background');
-};
-
-window.commenting = () => {
-  const form = document.querySelector('#form');
-  const popupTitle = document.querySelector('#title');
-  form.onsubmit = (e) => {
-    e.preventDefault();
-    const username = document.querySelector('#name');
-    const insight = document.querySelector('#insight');
-    if (username.value === '' || insight.value === '') {
-      alert('Do not leave blanks');
-      return;
-    }
-    movies.forEach((element) => {
-      if (popupTitle.innerHTML === element.movieTitle) {
-        postComment(username.value, insight.value, element.itemId);
-      }
-    });
-    username.value = '';
-    insight.value = '';
-  };
 };
 
 const createPopup = async (index) => {
@@ -60,8 +39,8 @@ const createPopup = async (index) => {
     </div>
   </div>
   <div class="popupspacing">
-    <h3 class="commentalign">Comments <span>${commentsCount}</span></h3>
-    <div>
+    <h3 class="commentalign">Comments <span id="movieCount" >${commentsCount}</span></h3>
+    <div id="commentSection" >
       ${comment}
     </div>
   </div>
@@ -78,7 +57,7 @@ const createPopup = async (index) => {
           <textarea name="insight" id="insight" cols="30" rows="10" placeholder="Your insight"></textarea>
         </label>
       </fieldset>
-      <button onclick="commenting()" type="submit">comment</button>
+      <button class="formSubmit" id="${itemId}" type="submit">comment</button>
     </form>
   </div>
 </div>`;
