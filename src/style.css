@@ -157,7 +157,7 @@ button:hover {
 
 .comment-likes i {
   font-size: 1rem;
-  margin-left: 120px;
+  margin-left: 90px;
 }
 
 .comment-likes i:hover {
@@ -165,7 +165,7 @@ button:hover {
 }
 
 .comment-likes span {
-  margin-right: 40px;
+  margin-right: 140px;
 }
 
 footer {
@@ -294,7 +294,17 @@ textarea {
   .container {
     padding: 1rem 10%;
   }
+
   .image img {
     width: 70%;
+  }
+
+  .comment-likes i {
+    font-size: 1rem;
+    margin-left: 90px;
+  }
+
+  .comment-likes span {
+    margin-right: 140px;
   }
 }
