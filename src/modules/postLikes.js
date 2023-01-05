@@ -19,8 +19,8 @@ const getLikes = async () => {
     // eslint-disable-next-line comma-dangle
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YxBlOWRJNblYAJxe3dgi/likes/'
   );
-  const likes = await response.json();
-  return likes;
+  const results = await response.json();
+  return results;
 };
 
 export { postLikes, getLikes };

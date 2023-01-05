@@ -1,16 +1,17 @@
 /* eslint-disable import/no-duplicates */
 import { comedy, action } from './variables.js';
-import getNumberOfLikes from './addLikes.js';
+
+import { getLikes } from './postLikes.js';
 import getMovies from './getMovies.js';
 import { pullMovies } from './getMovies.js';
 
 // Render likes
 const displayUI = async () => {
-  const movies = getMovies();
-  const data = await getNumberOfLikes();
+  const movies = await getMovies();
+  const newLikes = await getLikes();
   comedy.innerHTML = '';
   action.innerHTML = '';
-  data.forEach((obj, objIndex) => {
+  newLikes.forEach((obj, objIndex) => {
     const { movieImg } = movies[objIndex];
     if (objIndex <= 3) {
       comedy.innerHTML += `
@@ -20,8 +21,8 @@ const displayUI = async () => {
             </div>
             <div class="comment-likes">
               <button class="btnClass" id="comment">Comments</button>
-              <i class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
-              <span id="likes">${obj.likes}</span>
+              <i class="fa-sharp fa-solid fa-heart" data-id="${movies.id}"></i>
+              <span data-id="${movies.id}" id="likes-counter"></span>
             </div>
           </div>
   `;

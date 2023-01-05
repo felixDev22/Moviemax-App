@@ -4,9 +4,9 @@ import { postLikes } from './modules/postLikes.js';
 import showLikes from './modules/showlikes.js';
 import createPopup from './modules/popup.js';
 
-window.addEventListener('load', () => {
-  displayUI();
+displayUI();
 
+window.addEventListener('load', () => {
   const commentBtn = document.querySelectorAll('.btnClass');
   commentBtn.forEach((element) => {
     element.addEventListener('click', createPopup);
@@ -15,9 +15,7 @@ window.addEventListener('load', () => {
 
 window.addEventListener('click', async (e) => {
   const likeBtn = e.target;
-  if (likeBtn.classList.contains('fa-solid fa-heart')) {
-    const likes = likeBtn.getAttribute('fa-solid fa-heart');
-    await postLikes(likes);
-    await showLikes();
+  if (likeBtn.className === 'fa-solid fa-heart') {
+    console.log(e.target);
   }
 });

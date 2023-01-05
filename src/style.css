@@ -81,11 +81,14 @@ nav ul li a,
 }
 
 nav ul li a:hover {
-  color: var(--main-color);
+  color: var(--white-color);
+  background-color: var(--main-color);
+  padding: 0.8rem;
 }
 
 .active {
-  color: var(--main-color);
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
 }
 
 .logo img {

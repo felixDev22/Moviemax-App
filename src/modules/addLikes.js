@@ -3,8 +3,8 @@ const getNumberOfLikes = async () => {
     // eslint-disable-next-line comma-dangle
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YxBlOWRJNblYAJxe3dgi/likes/'
   );
-  const data = await request.json();
-  return data;
+  const myLikes = await request.json();
+  return myLikes;
 };
 
 export default getNumberOfLikes;
