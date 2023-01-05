@@ -1,46 +1,54 @@
 /* eslint-disable import/no-duplicates */
 import { comedy, action } from './variables.js';
-import getNumberOfLikes from './addLikes.js';
 import getMovies from './getMovies.js';
 import { pullMovies } from './getMovies.js';
+import { getLikes } from './postLikes.js';
 
 const movies = getMovies();
 // Render likes
 const displayUI = async () => {
-  const data = await getNumberOfLikes();
+  const likeArray = await getLikes();
   comedy.innerHTML = '';
   action.innerHTML = '';
-  data.forEach((obj, objIndex) => {
-    if (movies[objIndex] && movies[objIndex].movieImg) {
-      const { movieImg } = movies[objIndex];
-      if (objIndex <= 3) {
-        comedy.innerHTML += `
-      <div class="card">
-            <div class="image">
-              <img id='movie' src="${movieImg}" alt="movie" />
-            </div>
-            <div class="comment-likes">
-              <button class="btnClass" id="comment">Comments</button>
-              <i class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
-              <span id="likes">${obj.likes}</span>
-            </div>
-          </div>
-  `;
-      } else {
-        action.innerHTML += `
-      <div class="card">
-            <div class="image">
-              <img id='movie' src="${movieImg}" alt="movie" />
-            </div>
-            <div class="comment-likes">
-              <button class="btnClass" id="comment" >Comments</button>
-              <i class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
-              <span id="likes">${obj.likes}</span>
-            </div>
-          </div>`;
+  movies.forEach(async (obj, objIndex) => {
+    const { movieImg, itemId } = obj;
+    let likes = 0;
+    likeArray.forEach((like) => {
+      if (like.item_id === itemId) {
+        likes = like.likes;
       }
+    });
+    if (objIndex <= 3) {
+      comedy.innerHTML += `
+    <div class="card">
+          <div class="image">
+            <img id='movie' src="${movieImg}" alt="movie" />
+          </div>
+          <div class="comment-likes">
+            <button class="btnClass" id="comment">Comments</button>
+            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
+            <span id="likes">${likes}</span>
+          </div>
+        </div>
+`;
+    } else {
+      action.innerHTML += `
+    <div class="card">
+          <div class="image">
+            <img id='movie' src="${movieImg}" alt="movie" />
+          </div>
+          <div class="comment-likes">
+            <button class="btnClass" id="comment" >Comments</button>
+            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
+            <span id="likes">${likes}</span>
+          </div>
+        </div>`;
     }
   });
+};
+
+window.liking = () => {
+
 };
 
 const featuredShows = document.querySelector('.counter');
