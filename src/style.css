@@ -72,7 +72,7 @@ nav ul {
 }
 
 nav ul li a,
-.featured-counter {
+.counter {
   display: flex;
   flex-direction: row;
   color: var(--white-color);
