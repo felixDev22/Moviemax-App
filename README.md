@@ -110,7 +110,7 @@ To run the project, execute the following command:
 👤 Felix Nyamai
 
 - GitHub: [felixDev22](https://github.com/felixDev22)
-- Twitter: [@monzo200](https://twitter.com/twitterhandle)
+- Twitter: [@monzo200](https://twitter.com/monzo200)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/felixnyamai/)
 
 👤 Leehaney George
