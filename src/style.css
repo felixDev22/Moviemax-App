@@ -66,16 +66,25 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 30px;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav ul li a {
+nav ul li a,
+.featured-counter {
+  display: flex;
+  flex-direction: row;
   color: var(--white-color);
   font-size: 1.2rem;
   letter-spacing: var(--spacing);
 }
 
 nav ul li a:hover {
+  color: var(--main-color);
+}
+
+.active {
   color: var(--main-color);
 }
 
@@ -171,19 +180,22 @@ footer p {
   color: var(--main-color);
 }
 
-#popup {
-  max-width: 30rem;
+.background {
   z-index: 98;
   position: fixed;
-  top: 10%;
-  left: 30%;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #popup-flex {
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
   align-content: center;

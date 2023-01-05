@@ -6,7 +6,7 @@ const postLikes = async (id) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ item_id: id }),
+      body: JSON.stringify({ item_id: `${id}` }),
       // eslint-disable-next-line comma-dangle
     }
   );
