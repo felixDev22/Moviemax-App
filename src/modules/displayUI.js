@@ -1,6 +1,8 @@
+/* eslint-disable import/no-duplicates */
 import { comedy, action } from './variables.js';
 import getNumberOfLikes from './addLikes.js';
 import getMovies from './getMovies.js';
+import { pullMovies } from './getMovies.js';
 
 // Render likes
 const displayUI = async () => {
@@ -22,7 +24,6 @@ const displayUI = async () => {
               <span id="likes">${obj.likes}</span>
             </div>
           </div>
-
   `;
     } else {
       action.innerHTML += `
@@ -39,5 +40,8 @@ const displayUI = async () => {
     }
   });
 };
+
+const featuredShows = document.querySelector('.counter');
+featuredShows.innerHTML = `Movies (${pullMovies.length})`;
 
 export default displayUI;

@@ -1,5 +1,15 @@
+/* eslint-disable object-curly-newline */
 const baseUrl = 'https://api.tvmaze.com/search/shows?q=';
-const pullMovies = ['Young Sheldon', 'Modern Family', 'Friends', 'The Office', 'Reacher', 'Hanna', 'Gangland', 'Titans'];
+const pullMovies = [
+  'Young Sheldon',
+  'Modern Family',
+  'Friends',
+  'The Office',
+  'Reacher',
+  'Hanna',
+  'Gangland',
+  'Titans',
+];
 const displayMovies = [];
 
 const getMovies = () => {
@@ -9,9 +19,7 @@ const getMovies = () => {
     const data = await response.json();
     const arr = data[0];
     const { show } = arr;
-    const {
-      id, name, status, image, summary, premiered,
-    } = show;
+    const { id, name, status, image, summary, premiered } = show;
     const { medium } = image;
     const trimmedSummary = summary.substring(0, 200);
     const movie = {
@@ -28,3 +36,4 @@ const getMovies = () => {
 };
 
 export default getMovies;
+export { pullMovies };

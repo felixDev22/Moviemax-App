@@ -66,16 +66,25 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 30px;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav ul li a {
+nav ul li a,
+.counter {
+  display: flex;
+  flex-direction: row;
   color: var(--white-color);
   font-size: 1.2rem;
   letter-spacing: var(--spacing);
 }
 
 nav ul li a:hover {
+  color: var(--main-color);
+}
+
+.active {
   color: var(--main-color);
 }
 
@@ -148,7 +157,7 @@ button:hover {
 
 .comment-likes i {
   font-size: 1rem;
-  margin-left: -20px;
+  margin-left: 120px;
 }
 
 .comment-likes i:hover {
@@ -156,7 +165,7 @@ button:hover {
 }
 
 .comment-likes span {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 footer {
