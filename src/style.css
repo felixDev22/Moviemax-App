@@ -20,7 +20,7 @@
   --transition: all 0.3s;
   --spacing: 0.1rem;
   --radius: 15px;
-  --drop-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  --drop-shadow: 0 5px 12px rgba(0, 0, 0, 1.8);
 }
 
 body {
@@ -195,18 +195,25 @@ footer p {
 }
 
 #popup-flex {
-  max-width: 30rem;
+  max-width: 50rem;
+  padding: 40px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
   background-color: #ff007f;
   overflow-y: scroll;
-  max-height: 40rem;
+  max-height: 60rem;
+}
+
+#title {
+  color: #000;
 }
 
 .genre {
   display: flex;
+  font-weight: bold;
   justify-content: space-around;
 }
 
@@ -216,8 +223,23 @@ footer p {
   align-items: center;
 }
 
+#movieCount {
+  background: #b20077;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: #fff;
+}
+
 .commentalign {
   text-align: center;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.movieInfo {
+  font-size: 1.6rem;
+  line-height: 1.2rem;
 }
 
 .popupspacing {
@@ -229,16 +251,39 @@ footer p {
 }
 
 #popupimage {
-  width: 20rem;
-  height: 15rem;
+  width: 45%;
+  height: auto;
+  box-shadow: var(--drop-shadow);
+  border-radius: 10px;
 }
 
 #popupcancel {
   width: 2rem;
   height: 2rem;
+  color: #b20077;
 }
 
-#nameinput {
-  height: 2rem;
-  width: 14.7rem;
+input,
+textarea {
+  width: 110%;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.formSubmit {
+  margin-top: 1.2rem;
+  padding: 12px 28px;
+  background: var(--secondary-color);
+  color: var(--white-color);
+  font-size: 0.8rem;
+  font-weight: 00;
+  letter-spacing: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: var(--drop-shadow);
+}
+
+.formSubmit:hover {
+  background: var(--white-color);
+  color: var(--secondary-color);
+  box-shadow: var(--drop-shadow);
 }
