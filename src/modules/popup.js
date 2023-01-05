@@ -39,7 +39,7 @@ const createPopup = async (index) => {
     </div>
   </div>
   <div class="popupspacing">
-    <h3 class="commentalign">Comments <span>${commentsCount}</span></h3>
+    <h3 class="commentalign">Comments <span id="movieCount" >${commentsCount}</span></h3>
     <div id="commentSection" >
       ${comment}
     </div>
