@@ -13,9 +13,9 @@ const pullMovies = [
 const displayMovies = [];
 
 const getMovies = () => {
-  pullMovies.forEach(async (moviez, index) => {
+  pullMovies.forEach(async (movies, index) => {
     const itemId = 'item'.concat(index);
-    const fetchUrl = baseUrl.concat(moviez);
+    const fetchUrl = baseUrl.concat(movies);
     const response = await fetch(fetchUrl);
     const data = await response.json();
     const arr = data[0];
