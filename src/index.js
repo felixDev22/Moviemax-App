@@ -4,11 +4,8 @@ import displayUI from './modules/displayUI.js';
 
 displayUI();
 
-// window.addEventListener('load', () => {
-//   const commentBtn = document.querySelectorAll('.btnClass');
-//   commentBtn.forEach((element, index) => {
-//     element.addEventListener('click', () => {
-//       createPopup(index);
-//     });
-//   });
-// });
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('btnClass')) {
+    createPopup(e.target.id);
+  }
+});

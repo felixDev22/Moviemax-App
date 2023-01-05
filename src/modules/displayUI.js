@@ -110,9 +110,9 @@ const displayUI = async () => {
             <img id='movie' src="${movieImg}" alt="movie" />
           </div>
           <div class="comment-likes">
-            <button onclick="createPopup()" class="btnClass" id="comment">Comments</button>
-            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
-            <span id="likes">${likes}</span>
+            <button class="btnClass" id="${objIndex}">Comments</button>
+            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="${objIndex}"></i>
+            <span id="${objIndex}">${likes}</span>
           </div>
         </div>
 `;
@@ -123,9 +123,9 @@ const displayUI = async () => {
             <img id='movie' src="${movieImg}" alt="movie" />
           </div>
           <div class="comment-likes">
-            <button onclick="createPopup()" class="btnClass" id="comment" >Comments</button>
-            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="like-btn"></i>
-            <span id="likes">${likes}</span>
+            <button class="btnClass" id="${objIndex}" >Comments</button>
+            <i onclick="liking()" class="fa-sharp fa-solid fa-heart" id="${objIndex}"></i>
+            <span id="${objIndex}">${likes}</span>
           </div>
         </div>`;
     }
