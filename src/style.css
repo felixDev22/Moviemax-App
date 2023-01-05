@@ -55,7 +55,7 @@ p {
 }
 
 .container {
-  padding: 1rem 20%;
+  padding: 1rem 10%;
 }
 
 nav {
@@ -97,7 +97,7 @@ nav ul li a:hover {
 .category {
   display: flex;
   margin-top: 80px;
-  margin-bottom: -140px;
+  margin-bottom: -120px;
 }
 
 .category i {
@@ -195,7 +195,8 @@ footer p {
 }
 
 #popup-flex {
-  max-width: 50rem;
+  width: 35%;
+  height: 900px;
   padding: 40px;
   border-radius: 25px;
   display: flex;
@@ -204,7 +205,6 @@ footer p {
   align-items: center;
   background-color: #ff007f;
   overflow-y: scroll;
-  max-height: 60rem;
 }
 
 #title {
@@ -275,8 +275,8 @@ textarea {
   padding: 12px 28px;
   background: var(--secondary-color);
   color: var(--white-color);
-  font-size: 0.8rem;
-  font-weight: 300;
+  font-size: 0.8;
+  font-weight: 00;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
   box-shadow: var(--drop-shadow);
@@ -286,4 +286,15 @@ textarea {
   background: var(--white-color);
   color: var(--secondary-color);
   box-shadow: var(--drop-shadow);
+}
+
+/* media queries */
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 1rem 10%;
+  }
+  .image img {
+    width: 70%;
+  }
 }
