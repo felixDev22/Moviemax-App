@@ -28,7 +28,7 @@
 
 # 📖 <a name="MovieMax"></a>
 
-> Js Capstone Project - This is a MovieMax app that sends and receives data from an API and populates data on the browser. It also allows you to add comments or likes to a movie. The app has implemented ES6 modules, callbacks, and promises, webpack, used AAA pattern for unit tests, and Gitflow.
+> Js Capstone Project - This is a MovieMax app that sends and receives data from an API and populates data on the browser. It also allows you to add comments or likes to a movie. The app has implemented ES6 modules, callbacks, and promises, webpack, used AAA pattern for unit tests, and gitflow.
 
 ## 🛠 Built With <a name="built-with">HTML, CSS, & Javascript</a>
 

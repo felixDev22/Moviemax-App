@@ -1,3 +1,6 @@
+/* eslint-disable no-alert */
+/* eslint-disable operator-linebreak */
+/* eslint-disable object-curly-newline */
 import cancelPopup from '../assets/cancel.png';
 import { movies } from './displayUI.js';
 import { getComment, postComment } from './comments.js';
@@ -31,9 +34,8 @@ window.commenting = () => {
 };
 
 const createPopup = async (index) => {
-  const {
-    movieImg, movieInfo, movieTitle, movieStatus, moviePremier, itemId,
-  } = movies[index];
+  const { movieImg, movieInfo, movieTitle, movieStatus, moviePremier, itemId } =
+    movies[index];
   const commentItem = '?item_id='.concat(itemId);
   const comments = await getComment(commentItem);
   const commentsCount = comments.length;
