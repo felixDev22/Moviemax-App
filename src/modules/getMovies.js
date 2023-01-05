@@ -1,5 +1,5 @@
 const baseUrl = 'https://api.tvmaze.com/search/shows?q=';
-const pullMovies = ['Young Sheldon', 'Modern Family', 'Friends', 'The Office'];
+const pullMovies = ['Young Sheldon', 'Modern Family', 'Friends', 'The Office', 'Reacher', 'Hanna', 'Gangland', 'Titans'];
 const displayMovies = [];
 
 const getMovies = () => {

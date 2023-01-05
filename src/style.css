@@ -171,19 +171,22 @@ footer p {
   color: var(--main-color);
 }
 
-#popup {
-  max-width: 30rem;
+.background {
   z-index: 98;
   position: fixed;
-  top: 10%;
-  left: 30%;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #popup-flex {
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
   align-content: center;
