@@ -37,6 +37,10 @@ const createPopup = async (index) => {
   const commentItem = '?item_id='.concat(itemId);
   const comments = await getComment(commentItem);
   const commentsCount = comments.length;
+  let comment = '';
+  comments.forEach((element) => {
+    comment += `<p>${element.creation_date} ${element.username}: ${element.comment}</p>`;
+  });
   popupArea.classList.remove('nodisplay');
   popupArea.classList.add('background');
   popupArea.innerHTML = `<div id="popup-flex" class="scroll">
@@ -58,8 +62,7 @@ const createPopup = async (index) => {
   <div class="popupspacing">
     <h3 class="commentalign">Comments <span>${commentsCount}</span></h3>
     <div>
-      <p>2015-10-12 Lee: I loved the show</p>
-      <p>2015-10-12 Lee: I loved the show</p>
+      ${comment}
     </div>
   </div>
   <div class="popupspacing">
