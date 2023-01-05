@@ -16,6 +16,7 @@ const postLikes = async (id) => {
 
 const getLikes = async () => {
   const response = await fetch(
+    // eslint-disable-next-line comma-dangle
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YxBlOWRJNblYAJxe3dgi/likes/'
   );
   const likes = await response.json();
