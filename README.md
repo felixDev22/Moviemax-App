@@ -30,6 +30,13 @@
 
 > Js Capstone Project - This is a MovieMax app that sends and receives data from an API and populates data on the browser. It also allows you to add comments or likes to a movie. The app has implemented ES6 modules, callbacks, and promises, webpack, used AAA pattern for unit tests, and gitflow.
 
+## 👌 Kanban Template <a name="kanban">
+
+- Our Kanban template can be found [here.](https://github.com/felixDev22/Kanban---Movie-Project/projects/1)
+  
+  
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🛠 Built With <a name="built-with">HTML, CSS, & Javascript</a>
 
 - It has implemented Js Dynamic function to take data
