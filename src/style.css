@@ -65,9 +65,8 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
-  justify-content: space-between;
 }
 
 nav ul li a,
