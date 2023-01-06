@@ -61,7 +61,6 @@ p {
 nav {
   margin-top: 45px;
   display: flex;
-  justify-content: space-between;
 }
 
 nav ul {
@@ -88,8 +87,16 @@ nav ul li a:hover {
   color: var(--main-color);
 }
 
+.logo {
+  flex-basis: 30%;
+}
+
 .logo img {
   width: 12%;
+}
+
+.navLink {
+  flex-basis: 60%;
 }
 
 /* Movie-deck section */
