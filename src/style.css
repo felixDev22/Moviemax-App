@@ -65,7 +65,7 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
   justify-content: space-between;
 }
@@ -92,7 +92,7 @@ nav ul li a:hover {
 }
 
 .logo img {
-  width: 12%;
+  width: 35%;
 }
 
 .navLink {
