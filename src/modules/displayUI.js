@@ -19,7 +19,7 @@ const displayUI = async () => {
         likes = like.likes;
       }
     });
-    if (objIndex <= 3) {
+    if (objIndex <= 2) {
       comedy.innerHTML += `
     <div class="card">
           <div class="image">
@@ -48,9 +48,7 @@ const displayUI = async () => {
   });
 };
 
-window.liking = () => {
-
-};
+window.liking = () => {};
 
 const featuredShows = document.querySelector('.counter');
 featuredShows.innerHTML = `Movies (${pullMovies.length})`;
