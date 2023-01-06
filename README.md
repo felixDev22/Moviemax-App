@@ -40,7 +40,7 @@
 - Our Kanban template can be found [here.](https://github.com/felixDev22/Kanban---Movie-Project/projects/1)
   
 ## 🎉 Zoom Video
-- Our zoom video can be found [here.](https://drive.google.com/file/d/1E5l31oDKbgt5h0u7mVLxsu7HqJCZAkrv/view?usp=share_link)
+- Our zoom video can be found [here.](https://drive.google.com/file/d/1OCjn01tqeQ-x1VQVrUSXEN9eALDIjfRC/view?usp=sharing)
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
