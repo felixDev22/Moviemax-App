@@ -1,12 +1,10 @@
 /* eslint-disable object-curly-newline */
 const baseUrl = 'https://api.tvmaze.com/search/shows?q=';
 const pullMovies = [
-  'Young Sheldon',
   'Modern Family',
   'Friends',
   'The Office',
   'Reacher',
-  'Hanna',
   'Gangland',
   'Titans',
 ];

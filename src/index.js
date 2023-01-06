@@ -4,7 +4,7 @@ import createPopup from './modules/popup.js';
 import { postLikes } from './modules/postLikes.js';
 import commenting from './modules/formComment.js';
 
-displayUI();
+window.addEventListener('load', displayUI());
 
 document.addEventListener('click', async (e) => {
   if (e.target.classList.contains('btnClass')) {

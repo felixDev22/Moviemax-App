@@ -61,14 +61,12 @@ p {
 nav {
   margin-top: 45px;
   display: flex;
-  justify-content: space-between;
 }
 
 nav ul {
   display: flex;
   gap: 60px;
   align-items: center;
-  justify-content: space-between;
 }
 
 nav ul li a,
@@ -88,8 +86,16 @@ nav ul li a:hover {
   color: var(--main-color);
 }
 
+.logo {
+  flex-basis: 30%;
+}
+
 .logo img {
-  width: 12%;
+  width: 35%;
+}
+
+.navLink {
+  flex-basis: 60%;
 }
 
 /* Movie-deck section */
@@ -97,7 +103,7 @@ nav ul li a:hover {
 .category {
   display: flex;
   margin-top: 80px;
-  margin-bottom: -120px;
+  margin-bottom: -80px;
 }
 
 .category i {
@@ -115,7 +121,7 @@ hr {
 .movies-deck2 {
   margin: 8% auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 50px;
 }
