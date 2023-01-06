@@ -115,7 +115,7 @@ hr {
 .movies-deck2 {
   margin: 8% auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 50px;
 }
