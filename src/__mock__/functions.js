@@ -8,4 +8,9 @@ const mockItemCounter = (arr) => {
   return arrLength;
 };
 
-export { mockCommentsCounter, mockItemCounter };
+const mockLikeCounter = (arr) => {
+  const arrLength = arr.length;
+  return arrLength;
+};
+
+export { mockCommentsCounter, mockItemCounter, mockLikeCounter };
