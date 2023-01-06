@@ -192,7 +192,7 @@ footer p {
 
 #popup-flex {
   width: 35%;
-  height: 900px;
+  max-height: 550px;
   padding: 40px;
   border-radius: 25px;
   display: flex;
