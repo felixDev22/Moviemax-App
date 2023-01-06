@@ -103,7 +103,7 @@ nav ul li a:hover {
 .category {
   display: flex;
   margin-top: 80px;
-  margin-bottom: -120px;
+  margin-bottom: -80px;
 }
 
 .category i {
