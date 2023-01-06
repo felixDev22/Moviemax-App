@@ -11,8 +11,10 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖  Javascript Capstone Project](#-MovieMax-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Javascript Capstone Project (Movie App) ](#-javascript-capstone-project-movie-app-)
+  - [👌 Kanban Template ](#-kanban-template-)
+  - [🎉 Zoom Video](#-zoom-video)
   - [🛠 Built With HTML, CSS, \& Javascript](#-built-with-html-css--javascript)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -20,7 +22,10 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Clone](#clone)
+    - [Install](#install)
+    - [Usage](#usage)
   - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -34,6 +39,8 @@
 
 - Our Kanban template can be found [here.](https://github.com/felixDev22/Kanban---Movie-Project/projects/1)
   
+## 🎉 Zoom Video
+- Our zoom video can be found [here.](https://drive.google.com/file/d/1E5l31oDKbgt5h0u7mVLxsu7HqJCZAkrv/view?usp=share_link)
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
